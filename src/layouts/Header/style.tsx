@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { Color } from '@styles/index';
 
+export const HeaderStyle = styled.div(({ isSticky }: { isSticky: boolean }) => ({
+  position: isSticky ? 'sticky' : 'relative',
+  top: 0,
+  backgroundColor: '#fff',
+}));
+
 export const Content = styled.div({
   display: 'flex',
   justifyContent: 'space-between',

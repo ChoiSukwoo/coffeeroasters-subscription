@@ -1,6 +1,6 @@
 import React from 'react';
 import GlobalStyle from '@styles/global';
-import { Route, Routes } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 //Page
 import Router from './router';
@@ -8,8 +8,10 @@ import Router from './router';
 const App = () => {
   return (
     <>
-      <GlobalStyle />
-      <Router />
+      <HelmetProvider>
+        <GlobalStyle />
+        <Router />
+      </HelmetProvider>
     </>
   );
 };

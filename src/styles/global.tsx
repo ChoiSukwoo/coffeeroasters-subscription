@@ -133,9 +133,34 @@ const style = css`
   body {
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    width: 100dvw;
+    height: 100dvh;
     overflow-y: overlay; /* 반드시 overlay 처리 */
+  }
+
+  :root {
+    --scrollWidth--: 8px;
+  }
+
+  ::-webkit-scrollbar {
+    width: var(--scrollWidth--);
+    height: var(--scrollWidth--);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 10px;
+    box-shadow: inset var(--scrollWidth--) var(--scrollWidth--) 0 rgba(34, 34, 34, 0.15);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset var(--scrollWidth--) var(--scrollWidth--) 0 rgba(34, 34, 34, 0.3);
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: none;
+    background-color: rgba(34, 34, 34, 0.1);
+    border-radius: 10px;
   }
 
   @font-face {
