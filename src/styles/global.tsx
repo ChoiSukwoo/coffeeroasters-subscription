@@ -99,6 +99,8 @@ const style = css`
   button,
   select,
   a {
+    text-decoration: none;
+    color: inherit;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -125,6 +127,15 @@ const style = css`
   button {
     cursor: pointer;
     font-family: inherit;
+  }
+
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: overlay; /* 반드시 overlay 처리 */
   }
 
   @font-face {

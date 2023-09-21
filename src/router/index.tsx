@@ -11,8 +11,8 @@ const Router = () => {
     <Routes>
       <Route path={'*'} element={<NotFound />} />
       <Route path={'/'} element={<Home />} />
-      <Route path={'/'} element={<About />} />
-      <Route path={'*'} element={<Plan />} />
+      <Route path={'/about'} element={<About />} />
+      <Route path={'/plan'} element={<Plan />} />
     </Routes>
   );
 };

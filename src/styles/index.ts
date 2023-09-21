@@ -61,6 +61,7 @@ export const Font = {
     fontStyle: 'normal',
     fontSize: '12px',
     lineHeight: '15px',
+    letterSpacing: '0.92',
   } as CSSObject,
 
   button: {
