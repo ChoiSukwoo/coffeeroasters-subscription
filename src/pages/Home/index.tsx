@@ -1,4 +1,4 @@
-const Text = ` Home
+const homeText = `Home
 About us
 Create your plan
 
