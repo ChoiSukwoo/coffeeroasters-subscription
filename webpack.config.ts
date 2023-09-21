@@ -12,7 +12,7 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 const config: Configuration = {
-  name: 'sleact',
+  name: 'coffee',
   mode: isDevelopment ? 'development' : 'production',
   devtool: !isDevelopment ? 'hidden-source-map' : 'eval',
   resolve: {
@@ -24,6 +24,7 @@ const config: Configuration = {
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@typings': path.resolve(__dirname, 'src/typings'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
       '@asset': path.resolve(__dirname, 'src/asset'),
       '@svg': path.resolve(__dirname, 'src/asset/svg'),
       '@img': path.resolve(__dirname, 'src/asset/img'),
