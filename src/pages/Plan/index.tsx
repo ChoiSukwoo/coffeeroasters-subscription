@@ -105,3 +105,10 @@ Checkout
 Home
 About us
 Create your plan`;
+
+import React from 'react';
+
+const Plan = () => {
+  return <>Plan</>;
+};
+export default Plan;

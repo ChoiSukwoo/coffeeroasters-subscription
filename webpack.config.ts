@@ -25,13 +25,16 @@ const config: Configuration = {
       '@utils': path.resolve(__dirname, 'src/utils'),
       '@typings': path.resolve(__dirname, 'src/typings'),
       '@styles': path.resolve(__dirname, 'src/styles'),
-      '@asset': path.resolve(__dirname, 'src/asset'),
+
       '@svg': path.resolve(__dirname, 'src/asset/svg'),
       '@img': path.resolve(__dirname, 'src/asset/img'),
+      '@asset': path.resolve(__dirname, 'src/asset'),
+
+      '@src': path.resolve(__dirname, 'src'),
     },
   },
   entry: {
-    app: './client',
+    app: './src/index',
   },
   module: {
     rules: [

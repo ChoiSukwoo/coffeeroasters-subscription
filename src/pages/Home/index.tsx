@@ -61,3 +61,10 @@ Create your plan
 Home
 About us
 Create your plan`;
+
+import React from 'react';
+
+const Home = () => {
+  return <>Home</>;
+};
+export default Home;

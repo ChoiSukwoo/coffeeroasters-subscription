@@ -46,3 +46,10 @@ Victoria
 Home
 About us
 Create your plan`;
+
+import React from 'react';
+
+const About = () => {
+  return <>About</>;
+};
+export default About;
