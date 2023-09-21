@@ -11,15 +11,16 @@
     "resolveJsonModule": true,
     "baseUrl": "src",
     "paths": {
-      "@hooks/*": ["src/hooks/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@utils/*": ["src/utils/*"],
-      "@typings/*": ["src/typings/*"],
-      "@asset/*": ["src/asset/*"],
-      "@svg/*": ["src/asset/svg/*"],
-      "@img/*": ["src/asset/img/*"]
+      "@hooks/*": ["hooks/*"],
+      "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"],
+      "@typings/*": ["typings/*"],
+      "@styles/*": ["styles/*"],
+      "@asset/*": ["asset/*"],
+      "@svg/*": ["asset/svg/*"],
+      "@img/*": ["asset/img/*"]
     }
   },
   "ts-node": {
