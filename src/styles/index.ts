@@ -3,9 +3,12 @@ import { CSSProperties } from 'react';
 
 export const Color = {
   darkCyan: '#0E8784' as CSSProperties['color'],
-  darkCyanBlue: '#333D4B' as CSSProperties['color'],
+  cyan: '#66D2CF' as CSSProperties['color'],
+  darkGreyBlue: '#333D4B' as CSSProperties['color'],
   paleOrange: '#FDD6BA' as CSSProperties['color'],
   lightCream: '#FEFCF7' as CSSProperties['color'],
+  westar: '#e2dedbF' as CSSProperties['color'],
+  springWood: '#f4f1eb' as CSSProperties['color'],
   grey: '#83888F' as CSSProperties['color'],
 };
 
@@ -58,6 +61,14 @@ export const Font = {
     fontStyle: 'normal',
     fontSize: '12px',
     lineHeight: '15px',
+  } as CSSObject,
+
+  button: {
+    fontFamily: 'Fraunces',
+    fontWeight: '900',
+    fontStyle: 'normal',
+    fontSize: '18px',
+    lineHeight: '25px',
   } as CSSObject,
 };
 
