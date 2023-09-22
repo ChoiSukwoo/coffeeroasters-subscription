@@ -69,6 +69,13 @@ const config: Configuration = {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: 'imgs/[name].[ext]', //[폴더명][파일명][ext]
+        },
+      },
     ],
   },
   plugins: [

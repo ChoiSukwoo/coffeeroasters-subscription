@@ -6,7 +6,6 @@ import { Color } from '@styles/index';
 export const HeaderStyle = styled.div(({ isSticky }: { isSticky: boolean }) => ({
   position: isSticky ? 'sticky' : 'relative',
   top: 0,
-  backgroundColor: '#fff',
 }));
 
 export const Content = styled.div({
@@ -17,6 +16,7 @@ export const Content = styled.div({
 
 export const LogoCover = styled(Link)({
   flexShrink: '0',
+  fill: Color.darkGreyBlue,
 });
 
 export const NavBar = styled.nav({

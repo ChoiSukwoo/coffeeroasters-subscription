@@ -5,6 +5,7 @@ export const Color = {
   darkCyan: '#0E8784' as CSSProperties['color'],
   cyan: '#66D2CF' as CSSProperties['color'],
   darkGreyBlue: '#333D4B' as CSSProperties['color'],
+  darkGrey: '#293039' as CSSProperties['color'],
   paleOrange: '#FDD6BA' as CSSProperties['color'],
   lightCream: '#FEFCF7' as CSSProperties['color'],
   westar: '#e2dedbF' as CSSProperties['color'],

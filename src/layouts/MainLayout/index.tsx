@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 
 import Header from '@layouts/Header';
+import Footer from '@layouts/Footer';
 import { LayoutStyle } from './style';
 import { Helmet } from 'react-helmet-async';
 
@@ -19,6 +20,7 @@ const Layout = ({ title, headerSticky, children }: Props) => {
       <LayoutStyle>
         <Header isSticky={headerSticky} />
         {children}
+        <Footer />
       </LayoutStyle>
     </>
   );

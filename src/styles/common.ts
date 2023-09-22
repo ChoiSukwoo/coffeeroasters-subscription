@@ -9,8 +9,7 @@ export const ContainerCover = styled.div({
 
 export const Container = styled.div({
   flex: 1,
-  maxWidth: '1440px',
-  width: '100%',
+  width: '1440px',
   margin: '0px auto',
   padding: '0 80px',
 });

@@ -127,6 +127,8 @@ const style = css`
   button {
     cursor: pointer;
     font-family: inherit;
+    border: 0;
+    background-color: transparent;
   }
 
   html,

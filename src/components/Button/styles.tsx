@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Font, Color } from '@styles/index';
 
-export const Button01 = styled.div({
+export const Button01 = styled.button({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
