@@ -4,14 +4,6 @@ import { Color } from '@styles/index';
 import { Circle, Content, Line } from './style';
 import HowItWorksItem from '../HowItWorksItem';
 
-`
-
-Create your plan
-
-Home
-About us
-Create your plan`;
-
 const HowItWorks = () => {
   return (
     <ContainerCover as="section" style={{ marginBottom: '64px' }}>

@@ -127,6 +127,12 @@ export const Util = {
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  BackGround: ({ url }: { url: string }): CSSObject => ({
+    backgroundImage: `url(${url})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  }),
 };
 
 const styles = {
