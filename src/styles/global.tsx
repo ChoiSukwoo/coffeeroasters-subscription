@@ -142,6 +142,12 @@ const style = css`
 
   :root {
     --scrollWidth--: 8px;
+    --index--bg: -1;
+    --index--fillterCover: 10;
+    --index--fillterExpend: 11;
+    --index--header: 50;
+    --index--modalCover: 100;
+    --index--modalContent: 101;
   }
 
   ::-webkit-scrollbar {
