@@ -219,6 +219,9 @@ const style = css`
   body,
   .body {
     ${Font.body}
+    @media (max-width: 1280px) {
+      ${Font.body_m}
+    }
   }
 
   .title {

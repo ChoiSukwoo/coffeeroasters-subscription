@@ -56,6 +56,13 @@ export const Font = {
     fontSize: '16px',
     lineHeight: '26px',
   } as CSSObject,
+  body_m: {
+    fontFamily: 'Barlow',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    fontSize: '15px',
+    lineHeight: '25px',
+  } as CSSObject,
   nav: {
     fontFamily: 'Barlow',
     fontWeight: '700',
