@@ -1,15 +1,18 @@
 import React from 'react';
 
-import GranEspresso from '@img/home/desktop/image-gran-espresso.png';
-import Planalto from '@img/home/desktop/image-planalto.png';
-import Piccollo from '@img/home/desktop/image-piccollo.png';
-import Danche from '@img/home/desktop/image-danche.png';
+import GranEspresso from '@img/home/image-gran-espresso.png';
+import Planalto from '@img/home/image-planalto.png';
+import Piccollo from '@img/home/image-piccollo.png';
+import Danche from '@img/home/image-danche.png';
 
 import { Container, ContainerCover } from '@styles/common';
 import { BackTextCover, BackText, BackTextDim, Collectiontyle, BackTextPos, CollectionFlex } from './styles';
 import CollectionItem from '../CollectionItem';
+import { useResponsive } from '@hooks/responsive';
 
 const Banner = () => {
+  const { isDesktop, isTablet, isMobile } = useResponsive();
+
   return (
     <ContainerCover as="section" style={{ marginBottom: '200px' }}>
       <Container>

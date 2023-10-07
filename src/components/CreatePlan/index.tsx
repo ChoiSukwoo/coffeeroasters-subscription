@@ -1,6 +1,7 @@
 import HowItWorksItem from '@components/PlanItem';
 import React from 'react';
-import { Line, Circle, CircleCover, Content } from './style';
+import { Line, Circle, CircleCover, Content, ItemCover } from './style';
+import { useResponsive } from '@hooks/responsive';
 
 interface Props {
   type: PlanType;
@@ -9,15 +10,20 @@ interface Props {
 export type PlanType = 'white' | 'dark';
 
 const CreatePlan = ({ type }: Props) => {
+  const { isDesktop, isTablet, isMobile } = useResponsive();
+
   return (
     <Content>
-      <CircleCover>
-        <Line />
-        <Circle type={type} />
-        <Circle type={type} style={{ left: '380px' }} />
-        <Circle type={type} style={{ left: '760px' }} />
-      </CircleCover>
-      <div style={{ display: 'flex', columnGap: '95px' }}>
+      {!isMobile && (
+        <CircleCover>
+          <Line />
+          <Circle type={type} />
+          <Circle type={type} style={{ left: isDesktop ? '380px' : '233px' }} />
+          <Circle type={type} style={{ left: isDesktop ? '760px' : '466px' }} />
+        </CircleCover>
+      )}
+
+      <ItemCover>
         <HowItWorksItem
           num={'01'}
           name={'Pick your coffee'}
@@ -42,7 +48,7 @@ const CreatePlan = ({ type }: Props) => {
           }
           type={type}
         />
-      </div>
+      </ItemCover>
     </Content>
   );
 };

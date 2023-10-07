@@ -16,9 +16,9 @@ export const Color = {
 export const Font = {
   title: {
     fontFamily: 'Fraunces',
+    fontSize: '150px',
     fontWeight: '900',
     fontStyle: 'normal',
-    fontSize: '150px',
     lineHeight: '72px',
   } as CSSObject,
   h1: {

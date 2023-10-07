@@ -8,9 +8,12 @@ import HowItWorks from './components/HowItworks';
 import { Button01 } from '@components/Button/styles';
 import { Container, ContainerCover } from '@styles/common';
 import { useNavigate } from 'react-router';
+import { useResponsive } from '@hooks/responsive';
+import { ButtonCover } from './styles';
 
 const Home = () => {
   const navigator = useNavigate();
+  const { isDesktop, isTablet, isMobile } = useResponsive();
 
   const MoveHome = useCallback((e) => {
     navigator('/plan');
@@ -23,9 +26,11 @@ const Home = () => {
         <Collection />
         <ChooseUs />
         <HowItWorks />
-        <ContainerCover style={{ marginBottom: '200' }}>
+        <ContainerCover style={{ marginBottom: isDesktop ? '200' : isTablet ? '144' : '120' }}>
           <Container>
-            <Button01 onClick={MoveHome}>Create your plan</Button01>
+            <ButtonCover>
+              <Button01 onClick={MoveHome}>Create your plan</Button01>
+            </ButtonCover>
           </Container>
         </ContainerCover>
       </div>

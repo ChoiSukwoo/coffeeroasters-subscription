@@ -132,12 +132,13 @@ const style = css`
   }
 
   html,
-  body {
+  body,
+  #app {
     padding: 0;
     margin: 0;
     width: 100dvw;
     height: 100dvh;
-    overflow-y: overlay; /* 반드시 overlay 처리 */
+    overflow: auto; /* 반드시 overlay 처리 */
   }
 
   :root {
@@ -150,25 +151,31 @@ const style = css`
     --index--modalContent: 101;
   }
 
-  ::-webkit-scrollbar {
-    width: var(--scrollWidth--);
-    height: var(--scrollWidth--);
+  //PC 접속일때만 커스텀 스크롤바 처리
+  @media (hover: hover) and (pointer: fine) {
+    ::-webkit-scrollbar {
+      width: var(--scrollWidth--);
+      height: var(--scrollWidth--);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      outline: none;
+      border-radius: 10px;
+      box-shadow: inset var(--scrollWidth--) var(--scrollWidth--) 0 rgba(34, 34, 34, 0.15);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      box-shadow: inset var(--scrollWidth--) var(--scrollWidth--) 0 rgba(34, 34, 34, 0.3);
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: none;
+      background-color: rgba(34, 34, 34, 0.1);
+      border-radius: 10px;
+    }
   }
 
-  ::-webkit-scrollbar-thumb {
-    outline: none;
-    border-radius: 10px;
-    box-shadow: inset var(--scrollWidth--) var(--scrollWidth--) 0 rgba(34, 34, 34, 0.15);
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    box-shadow: inset var(--scrollWidth--) var(--scrollWidth--) 0 rgba(34, 34, 34, 0.3);
-  }
-
-  ::-webkit-scrollbar-track {
-    box-shadow: none;
-    background-color: rgba(34, 34, 34, 0.1);
-    border-radius: 10px;
+  @media (hover: none) and (pointer: coarse) {
   }
 
   @font-face {

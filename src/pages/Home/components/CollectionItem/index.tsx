@@ -1,5 +1,5 @@
 import React from 'react';
-import { CollectionItemStyle, ItemInfo, ItemNm } from './styles';
+import { CollectionItemStyle, ItemContent, ItemImgCover, ItemInfo, ItemNm } from './styles';
 
 interface Props {
   imgSrc: string;
@@ -10,9 +10,13 @@ interface Props {
 const CollectionItem = ({ imgSrc, name, info }: Props) => {
   return (
     <CollectionItemStyle>
-      <img alt={name} src={imgSrc} style={{ paddingBottom: '72px', objectFit: 'cover' }} />
-      <ItemNm>{name}</ItemNm>
-      <ItemInfo>{info}</ItemInfo>
+      <ItemImgCover>
+        <img alt={name} src={imgSrc} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+      </ItemImgCover>
+      <ItemContent>
+        <ItemNm>{name}</ItemNm>
+        <ItemInfo>{info}</ItemInfo>
+      </ItemContent>
     </CollectionItemStyle>
   );
 };
