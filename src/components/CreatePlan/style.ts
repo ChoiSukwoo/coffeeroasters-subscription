@@ -8,11 +8,11 @@ export const CircleCover = styled.div({
   padding: '14px 0',
   display: 'flex',
   position: 'relative',
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     marginBottom: '67px',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     marginBottom: '48px',
   },
 });
@@ -21,10 +21,10 @@ export const Line = styled.div({
   height: '2px',
   backgroundColor: Color.paleOrange,
 
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     width: '790px',
   },
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     width: '496px',
   },
 });
@@ -46,11 +46,11 @@ export const Circle = styled.div(
 export const ItemCover = styled.div({
   display: 'flex',
 
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     columnGap: '95px',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     columnGap: '10px',
   },
 

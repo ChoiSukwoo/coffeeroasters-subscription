@@ -10,11 +10,11 @@ export const HowItWorksItemStyle = styled.div(
 
     color: Color.darkGreyBlue,
 
-    '@media (min-width: 1281px)': {
+    '@media (min-width: 1440px)': {
       width: '285px',
     },
 
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1439px)': {
       width: '220px',
     },
 
@@ -31,11 +31,11 @@ export const HowItWorksItemStyle = styled.div(
 export const ItemNum = styled.h1({
   color: Color.paleOrange,
 
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     paddingBottom: '38px',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     marginBottom: '42px',
   },
 
@@ -45,12 +45,12 @@ export const ItemNum = styled.h1({
 });
 
 export const ItemNm = styled.h3({
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     paddingRight: '50px',
     marginBottom: '42px',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     marginBottom: '38px',
   },
 

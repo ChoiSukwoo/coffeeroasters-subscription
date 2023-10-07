@@ -8,13 +8,13 @@ export const ChooseUsItemStyle = styled.div({
   backgroundColor: Color.darkCyan,
   color: Color.lightCream,
 
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     width: '350px',
     padding: '72px 48px 48px 48px',
     flexDirection: 'column',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     width: '100%',
     padding: '41px 48px 41px 71px',
     flexDirection: 'row',
@@ -31,7 +31,7 @@ export const IconCover = styled.div({
   width: '72px',
   height: '72px',
 
-  '@media (min-width:768px) and (max-width: 1280px)': {
+  '@media (min-width:768px) and (max-width: 1439px)': {
     width: '56px',
     height: '56px',
   },
@@ -40,11 +40,11 @@ export const IconCover = styled.div({
 export const Content = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     paddingTop: '56px',
   },
 
-  '@media (min-width:768px) and (max-width: 1280px)': {
+  '@media (min-width:768px) and (max-width: 1439px)': {
     paddingLeft: '56px',
   },
 
@@ -56,11 +56,11 @@ export const Content = styled.div({
 export const ItemNm = styled.h4({
   textAlign: 'center',
 
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     marginBottom: '24px',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     marginBottom: '16px',
   },
 
@@ -72,7 +72,7 @@ export const ItemNm = styled.h4({
 export const ItemInfo = styled.div({
   display: 'flex',
   textAlign: 'center',
-  '@media (min-width:768px) and (max-width: 1280px)': {
+  '@media (min-width:768px) and (max-width: 1439px)': {
     textAlign: 'left',
   },
 });

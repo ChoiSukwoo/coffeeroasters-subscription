@@ -12,12 +12,12 @@ export const BannerStyle = styled.div(
     overflow: 'hidden',
     color: Color.lightCream,
 
-    '@media (min-width: 1281px)': {
+    '@media (min-width: 1440px)': {
       height: '600px',
       padding: '117px 85px 116px',
     },
 
-    '@media (max-width: 1280px)': {
+    '@media (max-width: 1439px)': {
       height: '500px',
       padding: '104px 58px 104px',
     },
@@ -32,12 +32,12 @@ export const BannerStyle = styled.div(
 );
 
 export const BannerTitle = styled.h1({
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     width: '493px',
     marginBottom: '32px',
   },
 
-  '@media (min-width:768px) and (max-width: 1280px)': {
+  '@media (min-width:768px) and (max-width: 1439px)': {
     width: '329px',
     marginBottom: '24px',
     fontSize: '48px',
@@ -51,12 +51,12 @@ export const BannerTitle = styled.h1({
 });
 
 export const BannerContent = styled.p({
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     width: '445px',
     marginBottom: '56px',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     width: '398px',
     marginBottom: '40px',
   },

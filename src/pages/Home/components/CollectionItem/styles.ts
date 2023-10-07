@@ -3,12 +3,12 @@ import styled from '@emotion/styled';
 export const CollectionItemStyle = styled.div({
   display: 'flex',
 
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     flexDirection: 'column',
     width: '255px',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     flexDirection: 'row',
     width: '100%',
   },
@@ -23,7 +23,7 @@ export const ItemImgCover = styled.div({
   flexShrink: '0',
   width: '255px',
   height: '193px',
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     marginBottom: '72px',
   },
   '@media (max-width: 767px)': {
@@ -34,7 +34,7 @@ export const ItemImgCover = styled.div({
 export const ItemContent = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  '@media (min-width:768px) and (max-width: 1280px)': {
+  '@media (min-width:768px) and (max-width: 1439px)': {
     margin: '30px 0 035px',
   },
 });

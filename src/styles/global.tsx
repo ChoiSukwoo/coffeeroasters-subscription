@@ -226,7 +226,7 @@ const style = css`
   body,
   .body {
     ${Font.body}
-    @media (max-width: 1280px) {
+    @media (max-width: 1439px) {
       ${Font.body_m}
     }
   }

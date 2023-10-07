@@ -13,7 +13,7 @@ export const Content = styled.div({
   justifyContent: 'space-between',
   margin: '45px 0 44px 0',
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     margin: '40px 0 52px 0',
   },
 

@@ -11,7 +11,7 @@ export const FooterStyle = styled.div({
   marginBottom: '88px',
   backgroundColor: Color.darkGreyBlue,
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     marginBottom: '72px',
     flexDirection: 'column',
     alignItems: 'center',
@@ -27,11 +27,11 @@ export const FooterStyle = styled.div({
 export const LogoCover = styled(Link)({
   flexShrink: '0',
 
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     marginRight: '103px',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     marginBottom: '32.5px',
   },
 
@@ -52,12 +52,12 @@ export const NavBar = styled.nav({
       color: Color.lightCream,
     },
 
-    '@media (min-width: 1280px)': {
+    '@media (min-width: 1439px)': {
       padding: '5px 0 4px 0',
     },
   },
 
-  '@media (min-width: 1280px)': {
+  '@media (min-width: 1439px)': {
     columnGap: '33px',
   },
 
@@ -73,11 +73,11 @@ export const IconList = styled.div({
   display: 'flex',
   columnGap: '24px',
 
-  '@media (min-width: 1281px)': {
+  '@media (min-width: 1440px)': {
     justifyContent: 'flex-end',
   },
 
-  '@media (max-width: 1280px)': {
+  '@media (max-width: 1439px)': {
     alignItems: 'flex-end',
   },
 
