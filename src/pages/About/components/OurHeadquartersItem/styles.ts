@@ -5,12 +5,44 @@ export const ItemStyle = styled.div({
   display: 'flex',
   flexDirection: 'column',
   color: Color.darkGreyBlue,
+
+  '@media (min-width: 1281px)': {
+    width: '225px',
+  },
+
+  '@media (max-width: 1280px)': {
+    width: '222px',
+  },
+
+  '@media (max-width: 767px)': {
+    width: '100%',
+    alignItems: 'center',
+  },
 });
 
 export const IconCover = styled.div({
   height: '50px',
+  '@media (min-width: 1281px)': {
+    marginBottom: '45PX',
+  },
+
+  '@media (max-width: 1280px)': {
+    marginBottom: '48PX',
+  },
 });
 
 export const Title = styled.h3({
-  margin: '50px 0 24px',
+  '@media (min-width: 1281px)': {
+    marginBottom: '24px',
+  },
+
+  '@media (max-width: 1280px)': {
+    marginBottom: '22px',
+    fontSize: '24px',
+  },
+
+  '@media (max-width: 767px)': {
+    marginBottom: '21px',
+    fontSize: '28px',
+  },
 });
