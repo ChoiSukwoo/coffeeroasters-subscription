@@ -1,5 +1,5 @@
 import React from 'react';
-import { HowItWorksItemStyle, ItemNm, ItemNum } from './styles';
+import { HowItWorksItemStyle, ItemContent, ItemNm, ItemNum } from './styles';
 import { PlanType } from '@components/CreatePlan';
 
 interface Props {
@@ -14,7 +14,7 @@ const HowItWorksItem = ({ num, name, info, type }: Props) => {
     <HowItWorksItemStyle type={type}>
       <ItemNum>{num}</ItemNum>
       <ItemNm>{name}</ItemNm>
-      <div>{info}</div>
+      <ItemContent>{info}</ItemContent>
     </HowItWorksItemStyle>
   );
 };

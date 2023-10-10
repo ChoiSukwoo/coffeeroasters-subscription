@@ -1,68 +1,46 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Container, ContainerCover } from '@styles/common';
 import { Content } from './style';
 
 import RightSide from '../SelectRightSide';
-import LeftSide from '../SelectLeftSide';
 import { SubmitErrorHandler, SubmitHandler, useForm } from 'react-hook-form';
-
-export interface IFormInput {
-  preferences?: PreferencesEnum;
-  beanType?: BeanTypeEnum;
-  quantity?: QuantityEnum;
-  grindOption?: GrindOptionEnum;
-  deliveries?: DeliveriesEnum;
-}
-
-export type IFormInputKeys = keyof IFormInput;
-
-export const Progress = ['Preferences', 'Bean Type', 'Quantity', 'Grind Option', 'Deliveries'];
-
-export enum IFormInputKeysEnum {
-  preferences = 'preferences',
-  beanType = 'beanType',
-  quantity = 'quantity',
-  grindOption = 'grindOption',
-  deliveries = 'deliveries',
-}
-
-export enum PreferencesEnum {
-  capsule = 'Capsule',
-  filter = 'Filter',
-  espresso = 'Espresso',
-}
-
-export enum BeanTypeEnum {
-  SingleOrigin = 'Single Origin',
-  Decaf = 'Decaf',
-  Blended = 'Blended',
-}
-
-export enum QuantityEnum {
-  _250g = '250g',
-  _500g = '500g',
-  _1000g = '1000g',
-}
-
-export enum GrindOptionEnum {
-  Wholebean = 'Wholebean',
-  Filter = 'Filter',
-  Cafetiere = 'Cafetiére',
-}
-
-export enum DeliveriesEnum {
-  EveryWeek = 'Every week',
-  Every2Weeks = 'Every 2 weeks',
-  EveryMonth = 'Every month',
-}
+import { useResponsive } from '@hooks/responsive';
+import { IFormInput, PreferencesEnum } from '@pages/Plan/data';
+import LeftSide from '../SelectLeftSide';
 
 interface Props {
   setAlterText: (content: IFormInput) => void;
   setShowSummary: () => void;
+  setShowAlterText: (text: string) => void;
 }
 
-const SelectSection = ({ setAlterText, setShowSummary }: Props) => {
+const SelectSection = ({ setAlterText, setShowSummary, setShowAlterText }: Props) => {
   const { register, handleSubmit, watch } = useForm<IFormInput>();
+
+  const { isDesktop } = useResponsive();
+
+  const grindOptionDisable = watch('preferences') === PreferencesEnum.capsule;
+
+  const [preferencesExtend, setPreferencesExtend] = useState(true);
+  const [beanTypeExtend, setBeanTypeExtend] = useState(true);
+  const [quantityExtend, setQuantityExtend] = useState(true);
+  const [grindOptionExtend, setGrindOptionExtend] = useState(true);
+  const [deliveriesExtend, setDeliveriesExtend] = useState(true);
+
+  const setPreferences = useCallback((value: boolean) => setPreferencesExtend(value), []);
+
+  const setBeanType = useCallback((value: boolean) => !!watch('preferences') && setBeanTypeExtend(value), []);
+
+  const setQuantity = useCallback((value: boolean) => !!watch('beanType') && setQuantityExtend(value), []);
+
+  const setGrindOption = useCallback(
+    (value: boolean) => !grindOptionDisable && !!watch('quantity') && setGrindOptionExtend(value),
+    [],
+  );
+
+  const setDeliveries = useCallback((value: boolean) => {
+    (!grindOptionDisable ? !!watch('quantity') : !!watch('grindOption')) && setDeliveriesExtend(value);
+  }, []);
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     setAlterText(data);
@@ -71,34 +49,74 @@ const SelectSection = ({ setAlterText, setShowSummary }: Props) => {
 
   const onError: SubmitErrorHandler<IFormInput> = (e) => {
     if (e.preferences) {
-      alert('Please Select Preferences');
+      setShowAlterText('Please Select Preferences');
       return;
     }
     if (e.beanType) {
-      alert('Please Select BeanType');
+      setShowAlterText('Please Select BeanType');
       return;
     }
     if (e.quantity) {
-      alert('Please Select Quantity');
+      setShowAlterText('Please Select Quantity');
       return;
     }
     if (e.grindOption) {
-      alert('Please Select GrindOptio');
+      setShowAlterText('Please Select GrindOptio');
       return;
     }
     if (e.deliveries) {
-      alert('Please Select Deliveries ');
+      setShowAlterText('Please Select Deliveries ');
       return;
     }
   };
 
   return (
     <ContainerCover style={{ marginBottom: '168px' }} as={'section'}>
-      <Container>
-        <Content onSubmit={handleSubmit(onSubmit, onError)} id="SelectForm">
-          <LeftSide watch={watch} />
-          <RightSide register={register} watch={watch} />
-        </Content>
+      <Container as={'form'} onSubmit={handleSubmit(onSubmit, onError)} id="SelectForm">
+        {isDesktop ? (
+          <Content>
+            <LeftSide
+              watch={watch}
+              extend={{
+                preferences: preferencesExtend,
+                beanType: beanTypeExtend,
+                quantity: quantityExtend,
+                grindOption: grindOptionExtend,
+                deliveries: deliveriesExtend,
+              }}
+              setExtend={{
+                preferences: setPreferences,
+                beanType: setBeanType,
+                quantity: setQuantity,
+                grindOption: setGrindOption,
+                deliveries: setDeliveries,
+              }}
+            />
+            <RightSide
+              register={register}
+              watch={watch}
+              extend={{
+                preferences: preferencesExtend,
+                beanType: beanTypeExtend,
+                quantity: quantityExtend,
+                grindOption: grindOptionExtend,
+                deliveries: deliveriesExtend,
+              }}
+            />
+          </Content>
+        ) : (
+          <RightSide
+            register={register}
+            watch={watch}
+            extend={{
+              preferences: preferencesExtend,
+              beanType: beanTypeExtend,
+              quantity: quantityExtend,
+              grindOption: grindOptionExtend,
+              deliveries: deliveriesExtend,
+            }}
+          />
+        )}
       </Container>
     </ContainerCover>
   );

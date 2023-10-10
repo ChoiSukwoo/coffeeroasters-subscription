@@ -3,6 +3,14 @@ import { Color } from '@styles/index';
 
 export const Title = styled.h2({
   color: Color.grey,
+  '@media (max-width: 1439px)': {
+    fontSize: '32px',
+  },
+
+  '@media (max-width: 767px)': {
+    fontSize: '24px',
+    lineHeight: '28px',
+  },
 });
 
 export const Header = styled.div(
@@ -10,13 +18,21 @@ export const Header = styled.div(
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: '56px',
+    '@media (min-width: 1440px)': {
+      marginBottom: '56px',
+    },
+    '@media (max-width: 1439px)': {
+      marginBottom: '40px',
+    },
+    '@media (max-width: 767px)': {
+      marginBottom: '32px',
+    },
   },
-  ({ active, disable }: { active: boolean; disable: boolean }) => ({
+  ({ disable, expend }: { disable: boolean; expend: boolean }) => ({
     opacity: disable ? 0.5 : 1,
 
-    '& > svg': {
-      rotate: !disable && active ? '180deg' : '0',
+    '& svg': {
+      rotate: expend ? '180deg' : '0',
     },
   }),
 );
@@ -24,7 +40,20 @@ export const Header = styled.div(
 export const Content = styled.div(
   {
     display: 'flex',
-    columnGap: '23px',
+
+    '@media (min-width: 1440px)': {
+      columnGap: '23px',
+    },
+
+    '@media (max-width: 1439px)': {
+      justifyContent: 'space-between',
+      columnGap: '10px',
+    },
+
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+      rowGap: '16px',
+    },
   },
   ({ active, disable }: { active: boolean; disable: boolean }) => ({}),
 );

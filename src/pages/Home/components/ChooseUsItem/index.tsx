@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChooseUsItemStyle, ItemInfo, ItemNm } from './styles';
+import { ChooseUsItemStyle, Content, IconCover, ItemInfo, ItemNm } from './styles';
 
 interface Props {
   Icon: string;
@@ -10,9 +10,13 @@ interface Props {
 const ChooseUsItem = ({ Icon: SvgIcon, name, info }: Props) => {
   return (
     <ChooseUsItemStyle>
-      <SvgIcon />
-      <ItemNm>{name}</ItemNm>
-      <ItemInfo>{info}</ItemInfo>
+      <IconCover>
+        <SvgIcon />
+      </IconCover>
+      <Content>
+        <ItemNm>{name}</ItemNm>
+        <ItemInfo>{info}</ItemInfo>
+      </Content>
     </ChooseUsItemStyle>
   );
 };

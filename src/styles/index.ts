@@ -16,9 +16,9 @@ export const Color = {
 export const Font = {
   title: {
     fontFamily: 'Fraunces',
+    fontSize: '150px',
     fontWeight: '900',
     fontStyle: 'normal',
-    fontSize: '150px',
     lineHeight: '72px',
   } as CSSObject,
   h1: {
@@ -55,6 +55,13 @@ export const Font = {
     fontStyle: 'normal',
     fontSize: '16px',
     lineHeight: '26px',
+  } as CSSObject,
+  body_m: {
+    fontFamily: 'Barlow',
+    fontWeight: '400',
+    fontStyle: 'normal',
+    fontSize: '15px',
+    lineHeight: '25px',
   } as CSSObject,
   nav: {
     fontFamily: 'Barlow',

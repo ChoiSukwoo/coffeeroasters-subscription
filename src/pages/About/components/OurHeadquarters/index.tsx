@@ -8,10 +8,13 @@ import Item from '../OurHeadquartersItem';
 import UkSvg from '@svg/about/illustration-uk.svg';
 import CanadaSvg from '@svg/about/illustration-canada.svg';
 import Australia from '@svg/about/illustration-australia.svg';
+import { useResponsive } from '@hooks/responsive';
 
 const OurCommitment = () => {
+  const { isDesktop, isTablet, isMobile } = useResponsive();
+
   return (
-    <ContainerCover as={'section'} style={{ paddingBottom: '168px' }}>
+    <ContainerCover as={'section'} style={{ marginBottom: isDesktop ? '168px' : isTablet ? '144px' : '120px' }}>
       <Container>
         <Content>
           <h4 style={{ color: Color.grey, marginBottom: '72px' }}>Our headquarters</h4>

@@ -1,24 +1,25 @@
-import { CreateModal } from './styles';
+import { ModalBackground } from './styles';
 import React, { CSSProperties, MouseEventHandler, useCallback } from 'react';
 
 interface Props {
   show: boolean;
   onClose: () => void;
-  style?: CSSProperties;
+  modalStyle?: CSSProperties;
+  backgroundStyle?: CSSProperties;
   children: JSX.Element | JSX.Element[];
 }
 
-const AlertModal = ({ show, onClose, style, children }: Props) => {
+const AlertModal = ({ show, onClose, modalStyle, backgroundStyle, children }: Props) => {
   const stopPropagation = useCallback<MouseEventHandler<HTMLDivElement>>((e) => {
     e.stopPropagation();
   }, []);
 
   return show ? (
-    <CreateModal onClick={onClose}>
-      <div onClick={stopPropagation} style={style}>
+    <ModalBackground onClick={onClose} style={backgroundStyle}>
+      <div onClick={stopPropagation} style={modalStyle}>
         {children}
       </div>
-    </CreateModal>
+    </ModalBackground>
   ) : (
     <></>
   );

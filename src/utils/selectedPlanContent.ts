@@ -1,5 +1,4 @@
-import { DeliveriesEnum, IFormInput, PreferencesEnum, QuantityEnum } from '@pages/Plan/components/SelectSection';
-import { type } from 'os';
+import { DeliveriesEnum, IFormInput, PreferencesEnum, QuantityEnum } from '@pages/Plan/data';
 
 type SelectPlanInfo = (data: IFormInput) => {
   textList: [number, string][];

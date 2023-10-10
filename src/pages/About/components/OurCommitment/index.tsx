@@ -1,17 +1,22 @@
 import { Container, ContainerCover } from '@styles/common';
 import React from 'react';
-import { Content, ImgStyle, TextAre } from './style';
+import { ContentCover, ImgStyle, Content, ContentTitle } from './style';
 
-import Image from '@img/about/desktop/image-commitment.jpg';
+import Image_d from '@img/about/image-commitment_d.jpg';
+import Image_t from '@img/about/image-commitment_t.jpg';
+import Image_m from '@img/about/image-commitment_m.jpg';
+import { useResponsive } from '@hooks/responsive';
 
 const OurCommitment = () => {
+  const { isDesktop, isTablet, isMobile } = useResponsive();
+
   return (
-    <ContainerCover as={'section'} style={{ paddingBottom: '168px' }}>
+    <ContainerCover as={'section'} style={{ marginBottom: isDesktop ? '168px' : isTablet ? '144px' : '120px' }}>
       <Container>
-        <Content>
-          <ImgStyle url={Image} />
-          <TextAre>
-            <h2 style={{ marginBottom: '32px' }}>Our commitment </h2>
+        <ContentCover>
+          <ImgStyle src={isDesktop ? Image_d : isTablet ? Image_t : Image_m} />
+          <Content>
+            <ContentTitle>Our commitment </ContentTitle>
             <p>
               We’re built on a simple mission and a commitment to doing good along the way. We want to make it easy for
               you to discover and brew the world’s best coffee at home. It all starts at the source. To locate the
@@ -21,8 +26,8 @@ const OurCommitment = () => {
               community initiatives, and invest in coffee plant science. Curating only the finest blends, we roast each
               lot to highlight tasting profiles distinctive to their native growing region.
             </p>
-          </TextAre>
-        </Content>
+          </Content>
+        </ContentCover>
       </Container>
     </ContainerCover>
   );

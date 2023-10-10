@@ -12,6 +12,14 @@ export const Content = styled.div({
   display: 'flex',
   justifyContent: 'space-between',
   margin: '45px 0 44px 0',
+
+  '@media (max-width: 1439px)': {
+    margin: '40px 0 52px 0',
+  },
+
+  '@media (max-width: 767px)': {
+    margin: '32px 0 40px 0',
+  },
 });
 
 export const LogoCover = styled(Link)({

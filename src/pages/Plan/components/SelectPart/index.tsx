@@ -1,10 +1,10 @@
 import { UseFormRegisterReturn, UseFormWatch } from 'react-hook-form';
-import { IFormInput, IFormInputKeys, IFormInputKeysEnum, PreferencesEnum } from '../SelectSection';
 import { Content, Header, Title } from './style';
 import React, { CSSProperties } from 'react';
 import SelectCard from '../SelectCard';
 import { CardInfo } from '../SelectRightSide';
 import ExpendIcon from '@svg/plan/desktop/icon-arrow.svg';
+import { IFormInput, IFormInputKeys } from '@pages/Plan/data';
 
 interface Props<T extends IFormInputKeys> {
   style?: CSSProperties;
@@ -13,6 +13,7 @@ interface Props<T extends IFormInputKeys> {
   title: string;
   active: boolean;
   disable: boolean;
+  expend: boolean;
   cardinfos: CardInfo<T>[];
 }
 
@@ -24,14 +25,17 @@ const SelectPart = <T extends IFormInputKeys>({
   style,
   active,
   disable,
+  expend,
 }: Props<T>) => {
+  const isExpend = !disable && active && expend;
+
   return (
     <div style={style}>
-      <Header active={active} disable={disable}>
+      <Header disable={disable} expend={isExpend}>
         <Title>{title}</Title>
         <ExpendIcon />
       </Header>
-      {!disable && active && (
+      {isExpend && (
         <Content active={active} disable={disable}>
           {cardinfos.map((cardinfo) => (
             <SelectCard
