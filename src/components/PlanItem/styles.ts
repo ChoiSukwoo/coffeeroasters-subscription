@@ -52,6 +52,8 @@ export const ItemNm = styled.h3({
 
   '@media (max-width: 1439px)': {
     marginBottom: '38px',
+    fontSize: '28px',
+    lineHeight: '32px',
   },
 
   '@media (max-width: 767px)': {

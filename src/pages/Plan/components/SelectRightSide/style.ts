@@ -4,9 +4,20 @@ import { Color } from '@styles/index';
 export const Content = styled.div({});
 
 export const Summary = styled.div({
-  padding: '47px 64px',
   borderRadius: '10px',
   backgroundColor: Color.darkGrey,
+
+  '@media (min-width: 1440px)': {
+    padding: '27px 64px',
+  },
+
+  '@media (max-width: 1439px)': {
+    padding: '27px 43px',
+  },
+
+  '@media (max-width: 767px)': {
+    padding: '32px 24px',
+  },
 });
 
 export const SummaryHeader = styled.p({
