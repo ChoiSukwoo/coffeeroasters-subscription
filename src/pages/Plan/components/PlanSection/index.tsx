@@ -11,12 +11,12 @@ const PlanSection = () => {
       {isDesktop ? (
         <Container>
           <PlanCover>
-            <CreatePlan type="dark" />
+            <CreatePlan theme="dark" />
           </PlanCover>
         </Container>
       ) : (
         <PlanCover>
-          <CreatePlan type="dark" />
+          <CreatePlan theme="dark" />
         </PlanCover>
       )}
     </ContainerCover>

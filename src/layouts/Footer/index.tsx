@@ -17,7 +17,9 @@ const Footer = () => {
     <ContainerCover>
       <Container>
         <FooterStyle>
-          <LogoCover to={"/"}>{isTablet ? <Logo_t /> : isMobile ? <Logo_m /> : <Logo_d />}</LogoCover>
+          <LogoCover to={"/"} aria-label="FooterHomeLogo">
+            {isTablet ? <Logo_t /> : isMobile ? <Logo_m /> : <Logo_d />}
+          </LogoCover>
           <NavBar>
             <Link to="/">HOME</Link>
             <Link to="/about">ABOUT US</Link>

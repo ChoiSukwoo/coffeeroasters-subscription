@@ -29,7 +29,9 @@ const Header = ({ isSticky }: Props) => {
         <ContainerCover>
           <Container>
             <Content>
-              <LogoCover to={"/"}>{isMobile ? <Logo_m /> : <Logo_d />}</LogoCover>
+              <LogoCover to={"/"} aria-label="HeaderHomeLogo">
+                {isMobile ? <Logo_m /> : <Logo_d />}
+              </LogoCover>
               {isMobile ? (
                 menuShow ? (
                   <CloseIcon onClick={() => setMenuShow(false)} />

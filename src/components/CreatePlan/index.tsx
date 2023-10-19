@@ -3,12 +3,12 @@ import { Line, Circle, CircleCover, Content, ItemCover } from "./style";
 import { useResponsive } from "@hooks/responsive";
 
 interface Props {
-  type: PlanType;
+  theme: PlanType;
 }
 
 export type PlanType = "white" | "dark";
 
-const CreatePlan = ({ type }: Props) => {
+const CreatePlan = ({ theme }: Props) => {
   const { isDesktop, isMobile } = useResponsive();
 
   return (
@@ -16,9 +16,9 @@ const CreatePlan = ({ type }: Props) => {
       {!isMobile && (
         <CircleCover>
           <Line />
-          <Circle type={type} />
-          <Circle type={type} style={{ left: isDesktop ? "380px" : "233px" }} />
-          <Circle type={type} style={{ left: isDesktop ? "760px" : "466px" }} />
+          <Circle theme={theme} />
+          <Circle theme={theme} style={{ left: isDesktop ? "380px" : "233px" }} />
+          <Circle theme={theme} style={{ left: isDesktop ? "760px" : "466px" }} />
         </CircleCover>
       )}
 
@@ -29,7 +29,7 @@ const CreatePlan = ({ type }: Props) => {
           info={
             "Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out."
           }
-          type={type}
+          type={theme}
         />
         <HowItWorksItem
           num={"02"}
@@ -37,7 +37,7 @@ const CreatePlan = ({ type }: Props) => {
           info={
             "Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal."
           }
-          type={type}
+          type={theme}
         />
         <HowItWorksItem
           num={"03"}
@@ -45,7 +45,7 @@ const CreatePlan = ({ type }: Props) => {
           info={
             "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience."
           }
-          type={type}
+          type={theme}
         />
       </ItemCover>
     </Content>
@@ -53,7 +53,7 @@ const CreatePlan = ({ type }: Props) => {
 };
 
 CreatePlan.defaultProps = {
-  type: "white",
+  theme: "white",
 };
 
 export default CreatePlan;
