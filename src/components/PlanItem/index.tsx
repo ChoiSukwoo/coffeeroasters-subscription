@@ -5,12 +5,12 @@ interface Props {
   num: string;
   name: string;
   info: string;
-  type: PlanType;
+  theme: PlanType;
 }
 
-const HowItWorksItem = ({ num, name, info, type }: Props) => {
+const HowItWorksItem = ({ num, name, info, theme }: Props) => {
   return (
-    <HowItWorksItemStyle type={type}>
+    <HowItWorksItemStyle theme={theme}>
       <ItemNum>{num}</ItemNum>
       <ItemNm>{name}</ItemNm>
       <ItemContent>{info}</ItemContent>
