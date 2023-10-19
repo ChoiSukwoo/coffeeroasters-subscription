@@ -1,15 +1,27 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "lib": ["ES2020", "DOM"],
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "Node",
-    "target": "es5",
-    "strict": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "baseUrl": "src",
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* customSetting */
+    "baseUrl": "./src",
     "paths": {
       "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
@@ -18,17 +30,14 @@
       "@utils/*": ["utils/*"],
       "@typings/*": ["typings/*"],
       "@styles/*": ["styles/*"],
-      "@asset/*": ["asset/*"],
+
       "@svg/*": ["asset/svg/*"],
-      "@img/*": ["asset/img/*"]
-    }
+      "@img/*": ["asset/img/*"],
+      "@asset/*": ["asset/*"]
+    },
+    /*svg*/
+    "types": ["vite-plugin-svgr/client"]
   },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "commonjs",
-      "moduleResolution": "Node",
-      "target": "es5",
-      "esModuleInterop": true
-    }
-  }
+  "include": ["src", "images.d.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
