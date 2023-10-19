@@ -181,21 +181,20 @@ const style = css`
     font-family: "Fraunces";
     font-weight: 900;
     font-display: swap;
-    src: url("./src/asset/font/Fraunces_9pt-Black.ttf");
+    src: url("/font/Fraunces_9pt-Black.ttf");
   }
-
   @font-face {
     font-family: "Barlow";
     font-weight: 400;
     font-display: swap;
-    src: url("./src/asset/font/Barlow-Regular.ttf");
+    src: url("/font/Barlow-Regular.ttf");
   }
 
   @font-face {
     font-family: "Barlow";
     font-weight: 700;
     font-display: swap;
-    src: url("./src/asset/font/Barlow-Bold.ttf");
+    src: url("/font/Barlow-Bold.ttf");
   }
 
   * {
