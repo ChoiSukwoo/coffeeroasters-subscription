@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 
 import BannerUrl_d from "@img/home/image-hero-coffeepress_d.jpg";
 import BannerUrl_t from "@img/home/image-hero-coffeepress_t.jpg";

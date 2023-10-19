@@ -1,5 +1,5 @@
-import { ModalBackground } from './styles';
-import React, { CSSProperties, MouseEventHandler, useCallback } from 'react';
+import { ModalBackground } from "./styles";
+import { CSSProperties, MouseEventHandler, useCallback } from "react";
 
 interface Props {
   show: boolean;

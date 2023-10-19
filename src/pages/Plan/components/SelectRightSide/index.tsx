@@ -60,7 +60,7 @@ const RightSide = ({ register, watch, extend }: Props) => {
         title="What type of coffee?"
         watch={watch("beanType")}
         register={register("beanType", { required: true })}
-        cardinfos={selectCardData.beentype}
+        cardinfos={selectCardData.beenType}
         active={beanTypeActive}
         expend={extend.beanType}
         style={{ marginBottom: isDesktop ? "88px" : isTablet ? "100px" : "110px" }}
