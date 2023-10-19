@@ -1,10 +1,10 @@
-import { UseFormRegisterReturn, UseFormWatch } from 'react-hook-form';
-import { Content, Header, Title } from './style';
-import React, { CSSProperties } from 'react';
-import SelectCard from '../SelectCard';
-import { CardInfo } from '../SelectRightSide';
-import ExpendIcon from '@svg/plan/desktop/icon-arrow.svg';
-import { IFormInput, IFormInputKeys } from '@pages/Plan/data';
+import { CSSProperties } from "react";
+import { UseFormRegisterReturn } from "react-hook-form";
+import { Content, Header, Title } from "./style";
+import SelectCard from "../SelectCard";
+import { CardInfo } from "../SelectRightSide";
+import ExpendIcon from "@svg/plan/desktop/icon-arrow.svg?react";
+import { IFormInput, IFormInputKeys } from "@pages/Plan/data";
 
 interface Props<T extends IFormInputKeys> {
   style?: CSSProperties;
@@ -17,16 +17,7 @@ interface Props<T extends IFormInputKeys> {
   cardinfos: CardInfo<T>[];
 }
 
-const SelectPart = <T extends IFormInputKeys>({
-  register,
-  watch,
-  title,
-  cardinfos,
-  style,
-  active,
-  disable,
-  expend,
-}: Props<T>) => {
+const SelectPart = <T extends IFormInputKeys>({ register, watch, title, cardinfos, style, active, disable, expend }: Props<T>) => {
   const isExpend = !disable && active && expend;
 
   return (
@@ -36,14 +27,14 @@ const SelectPart = <T extends IFormInputKeys>({
         <ExpendIcon />
       </Header>
       {isExpend && (
-        <Content active={active} disable={disable}>
+        <Content>
           {cardinfos.map((cardinfo) => (
             <SelectCard
               key={cardinfo.value}
               register={register}
               content={cardinfo.content}
               select={watch === cardinfo.value}
-              value={cardinfo.value || ''}
+              value={cardinfo.value || ""}
             />
           ))}
         </Content>

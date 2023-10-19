@@ -1,15 +1,13 @@
-import React from 'react';
-import { Container, ContainerCover } from '@styles/common';
-import { Color } from '@styles/index';
-import { Content, Title } from './style';
-import CreatePlan from '@components/CreatePlan';
-import { useResponsive } from '@hooks/responsive';
+import { Container, ContainerCover } from "@styles/common";
+import { Content, Title } from "./style";
+import CreatePlan from "@components/CreatePlan";
+import { useResponsive } from "@hooks/responsive";
 
 const HowItWorks = () => {
-  const { isDesktop, isTablet, isMobile } = useResponsive();
+  const { isTablet, isMobile } = useResponsive();
 
   return (
-    <ContainerCover as="section" style={{ marginBottom: isMobile ? '79px' : isTablet ? '44px' : '64px' }}>
+    <ContainerCover as="section" style={{ marginBottom: isMobile ? "79px" : isTablet ? "44px" : "64px" }}>
       <Container>
         <Content>
           <Title>How it works</Title>

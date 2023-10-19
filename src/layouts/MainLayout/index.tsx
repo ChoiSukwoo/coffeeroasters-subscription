@@ -1,12 +1,12 @@
-import React, { FC, ReactElement } from 'react';
+import { ReactElement } from "react";
 
-import Header from '@layouts/Header';
-import Footer from '@layouts/Footer';
-import { LayoutStyle } from './style';
-import { Helmet } from 'react-helmet-async';
+import Header from "@layouts/Header";
+import Footer from "@layouts/Footer";
+import { LayoutStyle } from "./style";
+import { Helmet } from "react-helmet-async";
 
 interface Props {
-  title: String;
+  title: string;
   headerSticky: boolean;
   children: ReactElement | ReactElement[];
 }

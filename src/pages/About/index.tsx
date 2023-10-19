@@ -1,14 +1,13 @@
-import Layout from '@layouts/MainLayout';
-import React from 'react';
+import Layout from "@layouts/MainLayout";
 
-import Banner from './components/Banner';
-import OurCommitment from './components/OurCommitment';
-import UncompromisingQuality from './components/UncompromisingQuality';
-import OurHeadquarters from './components/OurHeadquarters';
+import Banner from "./components/Banner";
+import OurCommitment from "./components/OurCommitment";
+import UncompromisingQuality from "./components/UncompromisingQuality";
+import OurHeadquarters from "./components/OurHeadquarters";
 
 const About = () => (
   <Layout title="About Us">
-    <div style={{ flex: '1' }}>
+    <div style={{ flex: "1" }}>
       <Banner />
       <OurCommitment />
       <UncompromisingQuality />

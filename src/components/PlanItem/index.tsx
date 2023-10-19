@@ -1,6 +1,5 @@
-import React from 'react';
-import { HowItWorksItemStyle, ItemContent, ItemNm, ItemNum } from './styles';
-import { PlanType } from '@components/CreatePlan';
+import { HowItWorksItemStyle, ItemContent, ItemNm, ItemNum } from "./styles";
+import { PlanType } from "@components/CreatePlan";
 
 interface Props {
   num: string;

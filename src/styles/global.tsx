@@ -1,6 +1,5 @@
-import React from 'react';
-import { Global, css } from '@emotion/react';
-import { Font } from '@styles/index';
+import { Global, css } from "@emotion/react";
+import { Font } from "@styles/index";
 
 const style = css`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -179,24 +178,24 @@ const style = css`
   }
 
   @font-face {
-    font-family: 'Fraunces';
+    font-family: "Fraunces";
     font-weight: 900;
     font-display: swap;
-    src: url('./src/asset/font/Fraunces_9pt-Black.ttf');
+    src: url("./src/asset/font/Fraunces_9pt-Black.ttf");
   }
 
   @font-face {
-    font-family: 'Barlow';
+    font-family: "Barlow";
     font-weight: 400;
     font-display: swap;
-    src: url('./src/asset/font/Barlow-Regular.ttf');
+    src: url("./src/asset/font/Barlow-Regular.ttf");
   }
 
   @font-face {
-    font-family: 'Barlow';
+    font-family: "Barlow";
     font-weight: 700;
     font-display: swap;
-    src: url('./src/asset/font/Barlow-Bold.ttf');
+    src: url("./src/asset/font/Barlow-Bold.ttf");
   }
 
   * {

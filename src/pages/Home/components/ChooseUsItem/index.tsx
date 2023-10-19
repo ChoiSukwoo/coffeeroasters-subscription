@@ -1,8 +1,7 @@
-import React from 'react';
-import { ChooseUsItemStyle, Content, IconCover, ItemInfo, ItemNm } from './styles';
+import { ChooseUsItemStyle, Content, IconCover, ItemInfo, ItemNm } from "./styles";
 
 interface Props {
-  Icon: string;
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
   name: string;
   info: string;
 }

@@ -1,8 +1,7 @@
-import React from 'react';
-import AlertModal from '@components/AlertModal';
-import { DesktopModalStyle, MobileBackgroundStyle, MobileModalStyle } from './style';
-import { useResponsive } from '@hooks/responsive';
-import Close from '@svg/shared/icon-close.svg';
+import AlertModal from "@components/AlertModal";
+import { DesktopModalStyle, MobileBackgroundStyle, MobileModalStyle } from "./style";
+import { useResponsive } from "@hooks/responsive";
+import Close from "@svg/shared/icon-close.svg?react";
 
 interface Props {
   isShow: boolean;
@@ -20,12 +19,12 @@ export const WarningModal = ({ isShow, onClose, data }: Props) => {
       backgroundStyle={isMobile ? MobileBackgroundStyle : {}}
       modalStyle={isMobile ? MobileModalStyle : DesktopModalStyle}
     >
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-        <button onClick={onClose} style={{ padding: '0' }}>
+      <div style={{ width: "100%", display: "flex", justifyContent: "flex-end" }}>
+        <button onClick={onClose} style={{ padding: "0" }}>
           <Close />
         </button>
       </div>
-      <div style={{ flex: 1, padding: '10px 0' }}>{data}</div>
+      <div style={{ flex: 1, padding: "10px 0" }}>{data}</div>
     </AlertModal>
   );
 };

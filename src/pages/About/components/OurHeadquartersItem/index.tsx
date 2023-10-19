@@ -1,8 +1,7 @@
-import React from 'react';
-import { IconCover, ItemStyle, Title } from './styles';
+import { IconCover, ItemStyle, Title } from "./styles";
 
 interface Props {
-  Icon: string;
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
   name: string;
   infoList: string[];
 }

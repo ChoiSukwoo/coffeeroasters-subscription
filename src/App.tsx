@@ -1,11 +1,8 @@
-import React from 'react';
-import GlobalStyle from '@styles/global';
-import { HelmetProvider } from 'react-helmet-async';
+import GlobalStyle from "@styles/global";
+import { HelmetProvider } from "react-helmet-async";
+import Router from "./router";
 
-//Page
-import Router from './router';
-
-const App = () => {
+function App() {
   return (
     <>
       <HelmetProvider>
@@ -14,6 +11,6 @@ const App = () => {
       </HelmetProvider>
     </>
   );
-};
+}
 
 export default App;

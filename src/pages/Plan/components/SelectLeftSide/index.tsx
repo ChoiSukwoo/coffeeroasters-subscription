@@ -1,8 +1,6 @@
-import React from 'react';
-import { Content, ItemNum, ItemStyle, ItemText, Line } from './style';
-import { Color } from '@styles/index';
-import { UseFormWatch } from 'react-hook-form';
-import { IFormInput, Progress, PreferencesEnum } from '@pages/Plan/data';
+import { Content, ItemNum, ItemStyle, ItemText, Line } from "./style";
+import { UseFormWatch } from "react-hook-form";
+import { IFormInput, Progress, PreferencesEnum } from "@pages/Plan/data";
 
 interface Props {
   watch: UseFormWatch<IFormInput>;
@@ -23,28 +21,28 @@ interface Props {
 }
 
 const LeftSide = ({ watch, extend, setExtend }: Props) => {
-  const grindOptionDisable = watch('preferences') === PreferencesEnum.capsule;
-  const beanTypeActive = !!watch('preferences');
-  const quantityActive = !!watch('beanType');
-  const grindOptionActive = !grindOptionDisable && !!watch('quantity');
-  const deliveriesActive = grindOptionDisable ? !!watch('quantity') : !!watch('grindOption');
+  const grindOptionDisable = watch("preferences") === PreferencesEnum.capsule;
+  const beanTypeActive = !!watch("preferences");
+  const quantityActive = !!watch("beanType");
+  const grindOptionActive = !grindOptionDisable && !!watch("quantity");
+  const deliveriesActive = grindOptionDisable ? !!watch("quantity") : !!watch("grindOption");
 
   const nowProgress = deliveriesActive
-    ? 'deliveries'
+    ? "deliveries"
     : grindOptionActive
-    ? 'grindOption'
+    ? "grindOption"
     : quantityActive
-    ? 'quantity'
+    ? "quantity"
     : beanTypeActive
-    ? 'beanType'
-    : 'preferences';
+    ? "beanType"
+    : "preferences";
 
   return (
     <Content>
       <LeftSideItem
         num={1}
         text={Progress[0]}
-        nowProgress={nowProgress === 'preferences'}
+        nowProgress={nowProgress === "preferences"}
         onClick={() => setExtend.preferences(!extend.preferences)}
         expendable={true}
       />
@@ -52,7 +50,7 @@ const LeftSide = ({ watch, extend, setExtend }: Props) => {
       <LeftSideItem
         num={2}
         text={Progress[1]}
-        nowProgress={nowProgress === 'beanType'}
+        nowProgress={nowProgress === "beanType"}
         onClick={() => setExtend.beanType(!extend.beanType)}
         expendable={beanTypeActive}
       />
@@ -60,7 +58,7 @@ const LeftSide = ({ watch, extend, setExtend }: Props) => {
       <LeftSideItem
         num={3}
         text={Progress[2]}
-        nowProgress={nowProgress === 'quantity'}
+        nowProgress={nowProgress === "quantity"}
         onClick={() => setExtend.quantity(!extend.quantity)}
         expendable={quantityActive}
       />
@@ -68,7 +66,7 @@ const LeftSide = ({ watch, extend, setExtend }: Props) => {
       <LeftSideItem
         num={4}
         text={Progress[3]}
-        nowProgress={nowProgress === 'grindOption'}
+        nowProgress={nowProgress === "grindOption"}
         disable={grindOptionDisable}
         onClick={() => setExtend.grindOption(!extend.grindOption)}
         expendable={grindOptionActive}
@@ -77,7 +75,7 @@ const LeftSide = ({ watch, extend, setExtend }: Props) => {
       <LeftSideItem
         num={5}
         text={Progress[4]}
-        nowProgress={nowProgress === 'deliveries'}
+        nowProgress={nowProgress === "deliveries"}
         onClick={() => setExtend.deliveries(!extend.deliveries)}
         expendable={deliveriesActive}
       />

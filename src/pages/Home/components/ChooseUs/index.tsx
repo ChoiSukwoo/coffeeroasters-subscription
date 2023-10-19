@@ -1,27 +1,26 @@
-import React from 'react';
-import { Container, ContainerCover } from '@styles/common';
-import { Back, BackTitle, BactContent, Content, ItemList, ItemListCover } from './styles';
-import CoffeeBin_l from '@svg/home/icon-coffee-bean_l.svg';
-import Gift_l from '@svg/home/icon-gift_l.svg';
-import Truck_l from '@svg/home/icon-truck_l.svg';
-import CoffeeBin_m from '@svg/home/icon-coffee-bean_m.svg';
-import Gift_m from '@svg/home/icon-gift_m.svg';
-import Truck_m from '@svg/home/icon-truck_m.svg';
-import ChooseUsItem from '../ChooseUsItem';
-import { useResponsive } from '@hooks/responsive';
+import { Container, ContainerCover } from "@styles/common";
+import { Back, BackTitle, BactContent, Content, ItemList, ItemListCover } from "./styles";
+import CoffeeBin_l from "@svg/home/icon-coffee-bean_l.svg?react";
+import Gift_l from "@svg/home/icon-gift_l.svg?react";
+import Truck_l from "@svg/home/icon-truck_l.svg?react";
+import CoffeeBin_m from "@svg/home/icon-coffee-bean_m.svg?react";
+import Gift_m from "@svg/home/icon-gift_m.svg?react";
+import Truck_m from "@svg/home/icon-truck_m.svg?react";
+import ChooseUsItem from "../ChooseUsItem";
+import { useResponsive } from "@hooks/responsive";
 
 const ChooseUs = () => {
-  const { isDesktop, isTablet, isMobile } = useResponsive();
+  const { isTablet, isMobile } = useResponsive();
 
   return (
-    <ContainerCover as="section" style={{ marginBottom: isMobile ? '120px' : isTablet ? '144px' : '200px' }}>
+    <ContainerCover as="section" style={{ marginBottom: isMobile ? "120px" : isTablet ? "144px" : "200px" }}>
       <Container>
         <Content>
           <Back>
             <BackTitle>Why choose us?</BackTitle>
             <BactContent>
-              A large part of our role is choosing which particular coffees will be featured in our range. This means
-              working closely with the best coffee growers to give you a more impactful experience on every level.
+              A large part of our role is choosing which particular coffees will be featured in our range. This means working closely with the best
+              coffee growers to give you a more impactful experience on every level.
             </BactContent>
           </Back>
           <ItemListCover>
